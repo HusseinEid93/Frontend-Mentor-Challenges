@@ -1,0 +1,44 @@
+.container {
+   width: 1200px;
+   max-width: 100%;
+   margin: $margin auto;
+   padding: 0 20px;
+   &-small {
+      @extend .container;
+      width: 700px;
+   }
+}
+
+.btn {
+   border: none;
+   outline: none;
+   text-decoration: none;
+   border-radius: 50px;
+   color: #fff;
+   @include font(16px, 600, inherit);
+   padding: 15px 35px;
+   margin: 15px 5px;
+}
+p {
+   line-height: 1.5;
+   color: $grayish-blue;
+}
+h1,
+h2,
+h3 {
+   color: $dark-grayish-blue;
+}
+img {
+   max-width: 100%;
+}
+ul {
+   list-style: none;
+}
+a {
+   text-decoration: none;
+}
+@media (max-width: 576px) {
+   h2 {
+      font-size: 1.4rem;
+   }
+}

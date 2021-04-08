@@ -1,0 +1,150 @@
+@import "variables", "mixins", "utilities";
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+html {
+   @include FireFox-scrollbar;
+}
+/* Add some styles to the scrollbar in Chrome. */
+::-webkit-scrollbar {
+   @include Chrome-scrollbar;
+}
+body {
+   font-family: $font-family;
+}
+header {
+   padding: 80px 0 20px;
+   background-image: url(../media/bg-header-desktop.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   @include downloadComponent;
+}
+
+.section-2 {
+   text-align: center;
+   .container-small {
+      @include d-grid(auto, 1rem);
+   }
+   .grid {
+      padding: 10px;
+      @include d-grid(1fr 1fr, 1rem);
+      align-items: center;
+      @media (max-width: 767px) {
+         grid-template-columns: 1fr;
+         gap: 2.5rem;
+      }
+   }
+   .text {
+      text-align: center;
+      @include d-grid(1fr, 1.25rem);
+      h3 {
+         margin-bottom: 1.25rem;
+      }
+   }
+}
+
+.section-3 {
+   @media (max-width: 767px) {
+      margin-top: 2 * $margin;
+   }
+   .container-small {
+      @include d-grid(1fr, 1.25rem);
+      text-align: center;
+   }
+}
+
+.section-4 {
+   text-align: center;
+   .header h2 {
+      margin-bottom: 1.25rem;
+   }
+   .grid {
+      margin-top: 1.5rem;
+      @include d-grid(repeat(3, 1fr), 2rem);
+      align-items: center;
+      @media (max-width: 767px) {
+         grid-template-columns: 1fr;
+         gap: 1.25rem;
+      }
+      > div {
+         @include d-grid(auto, 1.25rem);
+         justify-items: center;
+         @media (max-width: 767px) {
+            padding: 10px;
+         }
+      }
+   }
+}
+
+.companies {
+   margin-top: 2 * $margin;
+   .container {
+      @include d-grid(repeat(5, auto), 1.5rem);
+      align-items: center;
+      @media (max-width: 575px) {
+         grid-template-columns: auto;
+      }
+      > div {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+   }
+}
+
+section.download {
+   margin: 100px auto;
+   @include downloadComponent;
+}
+
+footer {
+   background-color: #ededed;
+   color: $dark-grayish-blue;
+   .container {
+      margin-bottom: 0;
+      padding: 40px 20px;
+      @include d-grid(1fr 3fr 1fr, 1rem);
+      align-items: center;
+      justify-items: center;
+      @media (max-width: 575px) {
+         grid-template-columns: 1fr;
+         gap: 3rem;
+      }
+   }
+   .logo img {
+      width: 60px;
+   }
+   ul {
+      justify-self: stretch;
+      @include d-grid(repeat(5, auto));
+      justify-content: space-between;
+      @media (max-width: 991px) {
+         row-gap: 1rem;
+         grid-template-columns: repeat(4, auto);
+      }
+      @media (max-width: 767px) {
+         grid-template-columns: repeat(3, auto);
+         font-size: 0.9rem;
+      }
+      @media (max-width: 575px) {
+         grid-template-columns: 1fr;
+         justify-items: center;
+         font-size: 1rem;
+      }
+      a {
+         color: inherit;
+      }
+   }
+   .social {
+      @include d-grid(repeat(3, 1fr), 0.75rem);
+      align-items: center;
+      a {
+         color: inherit;
+      }
+      i {
+         font-size: 1.5rem;
+      }
+   }
+}

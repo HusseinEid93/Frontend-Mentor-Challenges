@@ -1,0 +1,121 @@
+include mixins
+
+doctype html 
+html(lang="en")
+   head 
+      meta(charset="UTF-8")
+      meta(
+         http-equiv="X-UA-Compatible" 
+         content="IE=edge"
+      )
+      meta(
+         name="viewport" 
+         content="width=device-width, initial-scale=1.0"
+      )
+      link(
+         rel="stylesheet" 
+         href="../css/style.css"
+      )
+      // Font awesome 
+      script(
+         src="https://kit.fontawesome.com/ 54688c9bf4.js" crossorigin="anonymous"
+      ) 
+      - const links = ["https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css", "https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css", "https://kit-free.fontawesome.com/releases/latest/css/free.min.css"];
+      - for(let i = 0; i < links.length; i++)
+         link(
+            rel="stylesheet" 
+            href=links[i]
+            media="all"
+         )
+      title Frontend Mentor | Clipboard Landing Page 
+
+   body 
+      // Start the header 
+      header 
+         .container-small  
+            img(src="../media/logo.svg")
+            +downloadComponent(
+               "h1", 
+               "A history of everything you copy", 
+               "Clipboard allows you to track and organize everything you copy. Instantly access your clipboard on all your devices."
+            )
+            
+
+      // Start the second section 
+      section.section-2 
+         .container  
+            .container-small 
+               +title-paragraph(
+                  "h2",
+                  "Keep track of your snippets", 
+                  "Clipboard instantly stores any item you copy in the cloud, meaning you can access your snippets immediately on all your devices. Our Mac and iOS apps will help you organize everything. "
+               )
+            .grid    
+               .image 
+                  img(src="../media/image-computer.png")
+               .text 
+                  - const headings = ["Quick Search", "iCloud Sync", "Complete History"];
+                  - const paragraphs = ["Easily search your snippets by content, category, web address, application, and more.", "Instantly saves and syncs snippets across all your devices.", "Retrieve any snippets from the first moment you started using the app."];
+                  - for(let i = 0; i < 3; i++)
+                     .wrapper 
+                        +title-paragraph("h3", headings[i], paragraphs[i])
+
+      
+      // Section 3
+      section.section-3 
+         .container-small 
+            +title-paragraph(
+               "h2", 
+               "Access Clipboard anywhere", 
+               "Whether you’re on the go, or at your computer, you can access all your Clipboard snippets in a few simple clicks."
+            )
+            img(src="../media/image-devices.png")
+
+
+      // Section 4
+      section.section-4
+         .container 
+            .header  
+               +title-paragraph(
+                  "h2", 
+                  "Supercharge your workflow",
+                  "We’ve got the tools to boost your productivity."
+               ) 
+            .grid 
+               - const icons = ["blacklist", "text", "preview"];
+               - const titles = ["Create blacklists", "Plain text snippets", "Sneak preview"];
+               - const texts = ["Ensure sensitive information never makes its way to your clipboard by excluding certain sources.", "Remove unwanted formatting from copied text for a consistent look.", "Quick preview of all snippets on your Clipboard for easy access."];
+               - for(let i = 0; i < 3; i++)
+                  div 
+                     img(src=`../media/icon-${icons[i]}.svg`)
+                     +title-paragraph("h2", titles[i], texts[i])
+
+
+      // The .companies section 
+      section.companies 
+         .container 
+            - for(let i = 1; i <= 5; i++)
+               div: img(src=`../media/company${i}.png`)
+
+
+      // The .download section 
+      section.download 
+         .container-small 
+            +downloadComponent(
+               "h2", 
+               "Clipboard for iOS and Mac OS", 
+               "Available for free on the App Store. Download for Mac or iOS, sync with iCloud and you’re ready to start adding to your clipboard."
+            )
+
+
+      // Footer 
+      footer 
+         .container 
+            .logo: img(src="../media/logo.svg") 
+            ul
+               each link in ["FAQs", "Contact Us", "Privacy Policy", "Press Kit", "Install Guide"]
+                  li: a(href="#") #{link} 
+            .social
+               each icon in ["facebook", "twitter", "instagram"]
+                  a(href="#") 
+                     i(class=`fab fa-${icon}`)

@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
+.container, .container-small {
+  width: 1200px;
+  max-width: 100%;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.container-small {
+  width: 700px;
+}
+
+.btn, header .buttons > *, section.download .buttons > * {
+  border: none;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+  padding: 15px 35px;
+  margin: 15px 5px;
+}
+
+p {
+  line-height: 1.5;
+  color: #9fabb2;
+}
+
+h1,
+h2,
+h3 {
+  color: #4c545d;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #4c545d transparent;
+}
+
+/* Add some styles to the scrollbar in Chrome. */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4c545d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9fabb2;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+header {
+  padding: 80px 0 20px;
+  background-image: url(../media/bg-header-desktop.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header .container-small {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 1.5rem;
+  justify-items: center;
+  text-align: center;
+}
+
+header .buttons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  gap: 0.3rem;
+}
+
+@media (max-width: 575px) {
+  header .buttons {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+}
+
+header .buttons > * {
+  cursor: pointer;
+}
+
+header .buttons .btn-primary {
+  background-color: #26baa4;
+  -webkit-box-shadow: 0 4px #1d9a87;
+          box-shadow: 0 4px #1d9a87;
+}
+
+header .buttons .btn-secondary {
+  background-color: #6173ff;
+  -webkit-box-shadow: 0 4px #5565e2;
+          box-shadow: 0 4px #5565e2;
+}
+
+.section-2 {
+  text-align: center;
+}
+
+.section-2 .container-small {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  gap: 1rem;
+}
+
+.section-2 .grid {
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 767px) {
+  .section-2 .grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.section-2 .text {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.section-2 .text h3 {
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 767px) {
+  .section-3 {
+    margin-top: 60px;
+  }
+}
+
+.section-3 .container-small {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.section-4 {
+  text-align: center;
+}
+
+.section-4 .header h2 {
+  margin-bottom: 1.25rem;
+}
+
+.section-4 .grid {
+  margin-top: 1.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 767px) {
+  .section-4 .grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.section-4 .grid > div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  gap: 1.25rem;
+  justify-items: center;
+}
+
+@media (max-width: 767px) {
+  .section-4 .grid > div {
+    padding: 10px;
+  }
+}
+
+.companies {
+  margin-top: 60px;
+}
+
+.companies .container, .companies .container-small {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[5];
+      grid-template-columns: repeat(5, auto);
+  gap: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 575px) {
+  .companies .container, .companies .container-small {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+}
+
+.companies .container > div, .companies .container-small > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.download {
+  margin: 100px auto;
+}
+
+section.download .container-small {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 1.5rem;
+  justify-items: center;
+  text-align: center;
+}
+
+section.download .buttons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  gap: 0.3rem;
+}
+
+@media (max-width: 575px) {
+  section.download .buttons {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+}
+
+section.download .buttons > * {
+  cursor: pointer;
+}
+
+section.download .buttons .btn-primary {
+  background-color: #26baa4;
+  -webkit-box-shadow: 0 4px #1d9a87;
+          box-shadow: 0 4px #1d9a87;
+}
+
+section.download .buttons .btn-secondary {
+  background-color: #6173ff;
+  -webkit-box-shadow: 0 4px #5565e2;
+          box-shadow: 0 4px #5565e2;
+}
+
+footer {
+  background-color: #ededed;
+  color: #4c545d;
+}
+
+footer .container, footer .container-small {
+  margin-bottom: 0;
+  padding: 40px 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+@media (max-width: 575px) {
+  footer .container, footer .container-small {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+footer .logo img {
+  width: 60px;
+}
+
+footer ul {
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[5];
+      grid-template-columns: repeat(5, auto);
+  gap: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+  footer ul {
+    row-gap: 1rem;
+    -ms-grid-columns: (auto)[4];
+        grid-template-columns: repeat(4, auto);
+  }
+}
+
+@media (max-width: 767px) {
+  footer ul {
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 575px) {
+  footer ul {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    justify-items: center;
+    font-size: 1rem;
+  }
+}
+
+footer ul a {
+  color: inherit;
+}
+
+footer .social {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .social a {
+  color: inherit;
+}
+
+footer .social i {
+  font-size: 1.5rem;
+}

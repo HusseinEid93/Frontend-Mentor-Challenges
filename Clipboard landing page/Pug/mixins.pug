@@ -1,0 +1,17 @@
+mixin title-paragraph(headingType, title, paragraph)
+   case headingType 
+      when "h1": h1 #{title} 
+      when "h2": h2 #{title} 
+      when "h3": h3 #{title} 
+   p #{paragraph}
+
+
+mixin downloadComponent(headingType, title, paragraph)
+   +title-paragraph(
+      headingType, 
+      title, 
+      paragraph
+   )
+   div.buttons 
+      a.btn-primary Download for iOS
+      a.btn-secondary Download for Mac

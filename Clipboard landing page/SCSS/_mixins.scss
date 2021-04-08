@@ -1,0 +1,55 @@
+@mixin d-grid($grid-template-columns, $gap: 0) {
+   display: grid;
+   grid-template-columns: $grid-template-columns;
+   gap: $gap;
+}
+
+@mixin font($size, $weight, $family: $font-family) {
+   font-size: $size;
+   font-weight: $weight;
+   font-family: $family;
+}
+
+@mixin downloadComponent {
+   .container-small {
+      @include d-grid(1fr, 1.5rem);
+      justify-items: center;
+      text-align: center;
+   }
+   .buttons {
+      @include d-grid(repeat(2, auto), 0.3rem);
+      @media (max-width: 575px) {
+         grid-template-columns: auto;
+      }
+      > * {
+         @extend .btn;
+         cursor: pointer;
+      }
+      .btn-primary {
+         background-color: $strong-cyan;
+         box-shadow: 0 4px hsl(171, 68%, 36%);
+      }
+      .btn-secondary {
+         background-color: $light-blue;
+         box-shadow: 0 4px hsl(233, 71%, 61%);
+      }
+   }
+}
+
+@mixin FireFox-scrollbar {
+   scrollbar-width: thin;
+   scrollbar-color: $dark-grayish-blue transparent;
+}
+
+@mixin Chrome-scrollbar {
+   width: 6px;
+   &-track {
+      background-color: transparent;
+   }
+   &-thumb {
+      background: $dark-grayish-blue;
+      &:hover {
+         background-color: $grayish-blue;
+      }
+   }
+}
