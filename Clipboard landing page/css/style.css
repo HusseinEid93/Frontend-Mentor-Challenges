@@ -316,8 +316,29 @@ section.download .buttons .btn-secondary {
 }
 
 footer {
+  position: relative;
   background-color: #ededed;
   color: #4c545d;
+}
+
+footer .custom-shape-divider-top-1617866714 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+footer .custom-shape-divider-top-1617866714 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 35px;
+}
+
+footer .custom-shape-divider-top-1617866714 .shape-fill {
+  fill: #fff;
 }
 
 footer .container, footer .container-small {

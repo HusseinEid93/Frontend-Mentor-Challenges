@@ -100,8 +100,28 @@ section.download {
 }
 
 footer {
+   position: relative;
    background-color: #ededed;
    color: $dark-grayish-blue;
+   // SVG
+   .custom-shape-divider-top-1617866714 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      svg {
+         position: relative;
+         display: block;
+         width: calc(100% + 1.3px);
+         height: 35px;
+      }
+      .shape-fill {
+         fill: #fff;
+      }
+   }
+
    .container {
       margin-bottom: 0;
       padding: 40px 20px;
