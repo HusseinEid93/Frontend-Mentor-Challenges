@@ -140,6 +140,9 @@ footer {
    .social {
       @include d-grid(repeat(3, 1fr), 0.75rem);
       align-items: center;
+      @media (max-width: 575px) {
+         gap: 1.25rem;
+      }
       a {
          color: inherit;
       }

@@ -48,7 +48,7 @@ a {
 
 @media (max-width: 576px) {
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
   }
 }
 
@@ -397,6 +397,12 @@ footer .social {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 575px) {
+  footer .social {
+    gap: 1.25rem;
+  }
 }
 
 footer .social a {
